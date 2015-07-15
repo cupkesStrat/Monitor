@@ -31,7 +31,7 @@ class MacLoad(nagiosplugin.Resource):
 
     def probe(self):
         _log.info('reading load from sysctl -n vw.loadavg')
-        loadavg = subprocess.check_output(['sysctl -n vm.loadavg'])
+        loadavg = subprocess.check_output(["sysctl","-n","vm.loadavg"])
         _log.debug('raw load is %s', loadavg)
         cpus = self.cpus() if self.percpu else 1
         loadvals = loadavg.split()

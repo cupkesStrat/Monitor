@@ -22,14 +22,14 @@ class TestNagiosPluginMethods(unittest.TestCase):
       result_metric = check_metric[0]
       self.assertEqual(result_metric.value, True)
 
-  def test_macload_name_test(self):
+  def test_macload_name_check(self):
       mlt = MacLoad()
       result = mlt.probe()
       self.assertEqual(next(result).name,'load1')
       self.assertEqual(next(result).name, 'load5')
       self.assertEqual(next(result).name, 'load15')
 
-  def test_macload_value_test(self):
+  def test_macload_value_check(self):
       mlt = MacLoad()
       result = mlt.probe()
       self.assertGreater(next(result).value,0)

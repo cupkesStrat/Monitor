@@ -17,7 +17,7 @@ class MacLoad(nagiosplugin.Resource):
     The `probe` method returns the three standard load average numbers.
     If `percpu` is true, the load average will be normalized.
 
-    This check requires Linux-style /proc files to be present.
+    This check requires Mac systctl utility.
     """
 
     def __init__(self, percpu=False):

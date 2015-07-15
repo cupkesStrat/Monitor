@@ -1,17 +1,5 @@
 __author__ = 'christopher upkes'
 
-import nagiosplugin
-
-class MacLoad(nagiosplugin.Resource):
-    """Domain model: system load.
-
-    Determines the system load parameters and (optionally) cpu count.
-    The `probe` method returns the three standard load average numbers.
-    If `percpu` is true, the load average will be normalized.
-
-    This check requires Mac sysctl utility.
-    """
-
 import argparse
 import logging
 import nagiosplugin
